@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.find_by(id: params[:id])
+    @products = session[:cart]
   end
 
   def add
