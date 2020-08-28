@@ -1,5 +1,14 @@
-<% @products.each do |f| %>
-  <ul>
-    <li><%= f.id %></li>
-  </ul>
+<ul>
+  <% @cart.each do |f| %>
+    <li>
+      <%= f %>
+    </li>
+  <% end %> 
+</ul>
+
+Add a Product 
+<%= form_tag add_product_path do %>
+  <%= label_tag :product %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "Add to cart" %>
 <% end %>
