@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def add
-    @product =
+    @product = Product.find_by(id: params[:id])
+    current_cart << @product.id
   end
 
 end
