@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def add
-    @product = 
+    @product =
   end
 
 end
