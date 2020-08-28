@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   cart = session[:cart] || []
   session[:cart] = cart
   end
+
+  def current_cart
+    session[:cart] ||= []
+  end
 end
