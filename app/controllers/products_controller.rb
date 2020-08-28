@@ -1,12 +1,18 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = session[:cart]
+    @cart = cart 
   end
 
   def add
-    @product = Product.find_by(id: params[:id])
-    current_cart << @product.id
+    cart << product_params
+    redirect_to :products 
+  end
+
+  private 
+
+  def product_params 
+    params.require(:product)
   end
 
 end
